@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "chart.js": "^1.1.1",
     "react": "^16.7.0",
+    "react-chartjs": "^1.2.0",
     "react-dom": "^16.7.0"
   },
   "devDependencies": {
@@ -13,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "rm -r flask/static/* && mv build/* flask/static && mv flask/static/static/* flask/static"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -23,5 +26,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "http://127.0.0.1:5000"
 }
