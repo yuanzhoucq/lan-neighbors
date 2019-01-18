@@ -17,7 +17,7 @@ Then install python and nodejs dependencies:
     npm run build
     
     
-Now you will be able run the app and view the results on: http://localhost:5000.
+Now you will be able to run the app and view the results on: http://localhost:5000.
 
     cd flask && python3 app.py
 
